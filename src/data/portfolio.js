@@ -6,8 +6,8 @@ const DATA = {
   email: "sukhman23902@gmail.com",
   phone: "+91-9779189410",
   linkedin: "linkedin.com/in/sukhmanpreet-singh-626848200",
-  photo: "/my_image.jpg",
-  resume: "/Sukhmanpreet_Singh_SE.pdf",
+  photo: "my-portfolio/public/my_image.jpg",
+  resume: "my-portfolio/public/Sukhmanpreet_Singh_SE.pdf",
 
   experience: [
     {

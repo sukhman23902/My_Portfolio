@@ -3,20 +3,20 @@ import { SectionLabel } from '../components/SectionLabel';
 import { useBreakpoint } from '../hooks/useBreakpoint';
 
 function ExperienceCard({ entry, idx, scrollY, sectionTop, mobile, tablet }) {
-  const cardSpacing = mobile ? 320 : tablet ? 370 : 420;
-  const cardTopBase = (mobile ? 100 : tablet ? 120 : 140) + idx * cardSpacing;
+  const cardSpacing = tablet ? 500 : 420;
+  const cardTopBase = (tablet ? 120 : 140) + idx * cardSpacing;
   const relY = scrollY - (sectionTop + cardTopBase - window.innerHeight * 0.5);
-  const slideUp = Math.max(-80, Math.min(0, -relY * 0.12));
-  const scale = 1 - idx * 0.015;
+  const slideUp = mobile ? 0 : Math.max(-80, Math.min(0, -relY * 0.12));
+  const scale = mobile ? 1 : 1 - idx * 0.015;
 
-  const stickyTop = (mobile ? 60 : tablet ? 70 : 80) + idx * (mobile ? 20 : tablet ? 24 : 28);
+  const stickyTop = (tablet ? 70 : 80) + idx * (tablet ? 24 : 28);
 
   return (
     <div style={{
-      position: "sticky",
-      top: stickyTop,
-      marginBottom: mobile ? 24 : 40,
-      transform: `translateY(${slideUp}px) scale(${scale})`,
+      position: mobile ? "relative" : "sticky",
+      top: mobile ? undefined : stickyTop,
+      marginBottom: mobile ? 28 : 40,
+      transform: mobile ? undefined : `translateY(${slideUp}px) scale(${scale})`,
       transformOrigin: "top center",
       zIndex: 10 + idx,
     }}>
@@ -99,7 +99,7 @@ export default function Experience({ scrollY, data }) {
   return (
     <section id="experience" ref={ref} style={{
       position: "relative",
-      padding: mobile ? "80px 16px 100px" : tablet ? "100px 32px 140px" : "140px 48px 180px",
+      padding: mobile ? "80px 16px 20px" : tablet ? "100px 32px 40px" : "140px 48px 60px",
       maxWidth: 1180, margin: "0 auto",
     }}>
       <SectionLabel num="02" label="Experience" color="oklch(0.78 0.09 40)" />

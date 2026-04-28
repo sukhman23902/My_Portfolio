@@ -60,7 +60,8 @@ export default function Hero({ scrollY, data }) {
           background: "rgba(249,247,242,0.5)",
         }}>
           <span style={{ width: 8, height: 8, borderRadius: 999, background: "oklch(0.65 0.18 145)" }} />
-          Available for opportunities · {data.location}
+          Available for opportunities
+          {/* Available for opportunities · {data.location} */}
         </div>
         <h1 style={{
           fontFamily: "'Grandstander', system-ui",
@@ -135,8 +136,8 @@ export default function Hero({ scrollY, data }) {
           }} />
           <img src={data.photo} alt="" style={{
             position: "relative",
-            width: mobile ? 160 : tablet ? 200 : 250,
-            height: mobile ? 160 : tablet ? 200 : 250,
+            width: mobile ? 150 : tablet ? 160 : 180,
+            height: mobile ? 150 : tablet ? 160 : 180,
             borderRadius: mobile ? 16 : 20, objectFit: "cover",
             border: "3px solid #F9F7F2",
             boxShadow: "0 18px 40px -14px rgba(0,0,0,0.25)",
@@ -147,7 +148,7 @@ export default function Hero({ scrollY, data }) {
       {/* Scroll hint — hidden on mobile */}
       {!mobile && (
         <div style={{
-          position: "absolute", bottom: 40, left: "50%", transform: "translateX(-50%)",
+          position: "absolute", bottom: 10, left: "50%", transform: "translateX(-50%)",
           display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
           opacity: Math.max(0, 1 - scrollY / 300),
           fontFamily: "'Space Grotesk', system-ui", fontSize: 11, letterSpacing: 2, textTransform: "uppercase",

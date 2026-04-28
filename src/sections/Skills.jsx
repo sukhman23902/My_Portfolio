@@ -18,7 +18,7 @@ export default function Skills({ data }) {
   const pillPadding = mobile ? "8px 14px" : tablet ? "10px 18px" : "12px 22px";
 
   return (
-    <section id="skills" style={{ padding: mobile ? "60px 0" : tablet ? "80px 0" : "120px 0" }}>
+    <section id="skills" style={{ padding: mobile ? "30px 0" : tablet ? "30px 0" : "40px 0" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: `0 ${sidePad}px ${mobile ? 24 : tablet ? 36 : 48}px` }}>
         <SectionLabel num="04" label="Stack" color="oklch(0.65 0.18 145)" />
         <h2 style={{

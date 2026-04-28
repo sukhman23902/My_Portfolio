@@ -147,7 +147,7 @@ export default function Work({ data }) {
   return (
     <section id="work" style={{
       position: "relative",
-      padding: mobile ? "80px 16px 60px" : tablet ? "120px 32px 90px" : "160px 48px 120px",
+      padding: mobile ? "30px 16px 20px" : tablet ? "30px 30px 30px" : "40px 48px 40px",
       maxWidth: 1280, margin: "0 auto",
     }}>
       <SectionLabel num="03" label="Selected Work" color="oklch(0.55 0.28 295)" />

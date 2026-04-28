@@ -45,10 +45,10 @@ export default function Hero({ scrollY, data }) {
 
       {/* Headline */}
       <div style={{
-        position: "absolute", top: "50%", left: "50%",
+        position: "absolute", top: "48%", left: "50%",
         transform: `translate(-50%, calc(-50% + ${headY}px))`,
         textAlign: "center", width: "min(1100px, 92%)",
-        opacity: fade,
+        opacity: fade, zIndex: 3,
       }}>
         <div style={{
           display: "inline-flex", alignItems: "center", gap: mobile ? 8 : 10,
@@ -148,14 +148,15 @@ export default function Hero({ scrollY, data }) {
       {/* Scroll hint — hidden on mobile */}
       {!mobile && (
         <div style={{
-          position: "absolute", bottom: 10, left: "50%", transform: "translateX(-50%)",
-          display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
+          position: "absolute", bottom: 28, left: "50%", transform: "translateX(-50%)",
+          display: "flex", flexDirection: "column", alignItems: "center", gap: 6,
           opacity: Math.max(0, 1 - scrollY / 300),
-          fontFamily: "'Space Grotesk', system-ui", fontSize: 11, letterSpacing: 2, textTransform: "uppercase",
-          color: "rgba(17,17,17,0.55)",
+          fontFamily: "'Space Grotesk', system-ui", fontSize: 10, letterSpacing: 2, textTransform: "uppercase",
+          color: "rgba(17,17,17,0.4)",
+          zIndex: 1,
         }}>
           Scroll
-          <div style={{ width: 1, height: 36, background: "linear-gradient(to bottom, rgba(17,17,17,0.5), transparent)" }} />
+          <div style={{ width: 1, height: 24, background: "linear-gradient(to bottom, rgba(17,17,17,0.35), transparent)" }} />
         </div>
       )}
     </section>

@@ -72,6 +72,26 @@ const DATA = {
       repo: "https://github.com/sukhman23902/Email_automator",
     },
     {
+      title: "Cronos: Distributed Task Scheduler",
+      org: "System Design Project",
+      blurb: "Designed and built a distributed task scheduling system from scratch to demonstrate production-grade distributed-systems patterns — outbox-based dispatch, Redis leader election with TTL renewal, idempotent worker execution, exponential-backoff retries with dead-letter queue, and zombie recovery for stuck jobs. Architected a 5-module Spring Boot 3 stack (API, 2x Dispatcher, 3x Worker, Monitor) communicating through Kafka and Postgres, leveraging Java 21 virtual threads for thousands of concurrent HTTP callbacks. Implemented end-to-end observability with Micrometer, Prometheus, and a provisioned Grafana dashboard using DB-backed gauges that survive restarts. Ships with a one-command Docker Compose bring-up and 26 passing unit + integration tests via Testcontainers.",
+      tags: ["Java 21", "Apache Kafka", "PostgreSQL", "Redis", "Docker Compose", "Prometheus",
+             "Grafana", "Virtual Threads", "Transactional Outbox", "Leader Election", "Testcontainers"],
+      palette: ["oklch(0.62 0.18 25)", "oklch(0.72 0.12 60)"],
+      visibility: "public",
+      repo: "https://github.com/sukhman23902/Cronos",
+    },
+    {
+      title: "QuickCart: Enterprise E-commerce API",
+      org: "System Design Project",
+      blurb: "Developed a secure, production-ready RESTful API for a multi-tenant e-commerce platform. Engineered a robust security layer using Spring Security and JWT for Role-Based Access Control (RBAC). Designed a complex database schema featuring automated stock validation, historical price tracking for orders, and a sophisticated 'Guest-to-User' cart merging algorithm. Built with a focus on data integrity, utilizing transactional logic to ensure consistent inventory management during high-traffic checkout events.",
+      tags: ["Spring Boot", "Spring Security", "JWT", "MySQL", "Hibernate/JPA", "REST API Design",
+             "Inventory Management"],
+      palette: ["oklch(0.65 0.15 210)", "oklch(0.75 0.10 180)"],
+      visibility: "public",
+      repo: "https://github.com/sukhman23902/QuickCart_Backend",
+    },
+    {
       title: "Nodit Social Platform",
       org: "System Design Project",
       blurb: "Engineered a scalable full-stack social platform designed to handle high-frequency user interactions and real-time data synchronization. Developed a robust backend using Node.js and Express, featuring a secure RBAC (Role-Based Access Control) system and JWT-based authentication. Designed a flexible NoSQL schema in MongoDB to support complex social graphs, including friend relationships, community memberships, and nested engagement metrics (likes, comments, and shares). Focused on optimizing database write-performance for real-time post-delivery and interactive social feeds, while utilizing Tailwind CSS to build a responsive, high-performance UI.",
@@ -79,15 +99,6 @@ const DATA = {
       palette: ["oklch(0.83 0.07 230)", "oklch(0.85 0.05 200)"],
       visibility: "public",
       repo: "https://github.com/sukhman23902/Nodit",
-    },
-    {
-      title: "QuickCart: Enterprise E-commerce API",
-      org: "System Design Project",
-      blurb: "Developed a secure, production-ready RESTful API for a multi-tenant e-commerce platform. Engineered a robust security layer using Spring Security and JWT for Role-Based Access Control (RBAC). Designed a complex database schema featuring automated stock validation, historical price tracking for orders, and a sophisticated 'Guest-to-User' cart merging algorithm. Built with a focus on data integrity, utilizing transactional logic to ensure consistent inventory management during high-traffic checkout events.",
-      tags: ["Spring Boot", "Spring Security", "JWT", "MySQL", "Hibernate/JPA", "REST API Design", "Inventory Management"],
-      palette: ["oklch(0.65 0.15 210)", "oklch(0.75 0.10 180)"],
-      visibility: "public",
-      repo: "https://github.com/sukhman23902/QuickCart_Backend",
     }
   ],
   skillGroups: [
